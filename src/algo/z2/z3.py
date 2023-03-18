@@ -17,3 +17,4 @@ while(True):
             count+=1
     else:
         wynik.append(count)
+#
