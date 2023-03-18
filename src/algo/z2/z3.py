@@ -13,4 +13,7 @@ czyli tutaj -- wynik = [3,0,0,2]
 wyniks = []
 count = 0
 for a1,b2 in zip(a,b):
-    wyniks.append(a1/b2)
+    if(a1/b2 == 0):
+        wyniks.append((a1/b2))
+    else:
+        wyniks.append(count)
