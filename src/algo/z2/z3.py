@@ -10,11 +10,7 @@ dla każdej liczby z tablicy "a" sprawdzić ile jest takich liczb z tablicy "b" 
 czyli tutaj -- wynik = [3,0,0,2]
 """""
 
-while(True):
-    for item in b:
-
-        while(item/b[vaue]!=0):
-            count+=1
-    else:
-        wynik.append(count)
-#
+wyniks = []
+count = 0
+for a1,b2 in zip(a,b):
+    wyniks.append(a1/b2)
