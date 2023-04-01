@@ -18,6 +18,9 @@ def generate_data(data_size):
     return res
 
 
+
 if __name__ == '__main__':
     rr = generate_data(10)
     print(rr)
+
+
