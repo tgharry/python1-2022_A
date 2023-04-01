@@ -6,7 +6,6 @@ zadanie1:
  połączeń wychodzących.
 
 """
-
 def get_city_most_connections(train_data: list[tuple[int,int]]) -> int:
     list = [];
     maxs = 0
@@ -16,8 +15,6 @@ def get_city_most_connections(train_data: list[tuple[int,int]]) -> int:
     couns = Counter(list)
     print(list)
     print(couns.most_common(3))
-
-
 
 get_city_most_connections(generate_data(10))
 
