@@ -33,16 +33,39 @@ def non_duped(x):
     return a
 
 def non_dupeds(x):
-    dupe = []
+    dup = []
     status = True
     for item in x:
         if x.count(item) > 1:
-            dupe.append(item)
+            dup.append(item)
             status = False
     if status == True:
         return "No duplicates"
     else:
-        return f"Duplicates: {set(dupe)} \nWhole array: {dupe}"
+        return f"Duplicates: {set(dup)} \nWhole array: {dup}"
 
 print(unique(s))
 print(non_dupeds(s))
+
+namesz = [(5,'Adam'), (3,'Jane'), (5, 'Xiao'), (2,'Jane')]
+
+ids = []
+names = []
+dupe = []
+def xyz(array):
+    for id, name in array:
+        if id not in ids:
+            ids.append(id)
+        else:
+            dupe.append(id)
+            return id, name
+#print(xyz(namesz))
+
+def zyx(array):
+    for id, name in array:
+        if name not in names:
+            names.append(name)
+        else:
+            dupe.append(name)
+            return id, name
+print(zyx(namesz))
