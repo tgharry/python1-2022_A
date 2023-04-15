@@ -23,7 +23,7 @@ dd[3].append(3)
 
 
 s=['aa', 'a', 'c', 'bb', 'aa']
-r=['aa', 'a', 'c', 'bb']
+
 
 def unique(x):
     return set(x)
@@ -40,9 +40,9 @@ def non_dupeds(x):
             dupe.append(item)
             status = False
     if status == True:
-        print("No duplicates")
+        return "No duplicates"
     else:
-        print("Duplicates found")
-        print(dupe)
+        return f"Duplicates: {set(dupe)} \nWhole array: {dupe}"
+
 print(unique(s))
-non_dupeds(s)
+print(non_dupeds(s))
