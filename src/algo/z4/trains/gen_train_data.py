@@ -8,7 +8,7 @@ System "pocigągów" ... de facto połączeń między miastami reprezentowanymi 
 from random import randint, seed
 
 N_CITIES = 20
-seed(111)
+seed(10)
 
 
 def generate_data(data_size):
