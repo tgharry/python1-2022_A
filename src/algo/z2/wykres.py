@@ -19,8 +19,6 @@ dane = [
 
 x, y = dane[::2], dane[1::2]
 
-# plt.plot(x,y)
-
 y_ratios = [y2/y1 for (y1,y2) in zip(y[:-1], y[1:])]
 x_ratios = x[1:]
 

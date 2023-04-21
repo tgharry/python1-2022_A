@@ -1,6 +1,6 @@
 from random import seed, randint
 
-from src.algo.z2.algor import solve
+from src.algo.z2.algor import solver
 from src.algo.z2.gen import run_tests, visualize
 from random import seed, randint
 
@@ -36,16 +36,20 @@ def best_multiply(a: list[int]) -> int:
     while(True):
         if x < z or y < z:
             wynik = a[x] * a[y]
+            return wynik
         else:
             wynik = -1
-    return wynik
+            return wynik
 def generate_data(data_size):
     seed(111)
     mx_num = 10 ** 4
     data_a = [randint(0, mx_num) for _ in range(data_size)]
     return {"a": data_a}
 
+# +- 2min lagu, lepiej niż wcześniej
+""""""
 if __name__ == '__main__':
-    x, y = run_tests(generate_data, solve, max_size=10**4)
+    x, y = run_tests(generate_data, solver, max_size=10**4)
     visualize(x, y)
     # print(solve([2, 5, 7, 9, 2], [4, 8, 18, 27])){{{{{
+""""""

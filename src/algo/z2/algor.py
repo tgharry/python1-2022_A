@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 from random import seed, randint
 
 def algor(a, b):
-    a1 = set(a)
     wyniks = []
     count = 0
     for a1,b2 in zip(a,b):
@@ -19,8 +18,7 @@ def algor(a, b):
         else:
             wyniks.append(count)
 
-def solve(a, b):
-    a1 = set(a)
+def solver(a, b):
     wyniks = []
 
     for item in a:
@@ -39,9 +37,10 @@ def generate_data(data_size):
     b = [randint(0, mx_num) for _ in range(data_size)]
     return {"a": a, "b": b}
 
-
+#nie testować bo prawie zabiło laptopa
+"""""
 if __name__ == '__main__':
     x, y = run_tests(generate_data, solve, max_size=10**4)
     visualize(x, y)
     # print(solve([2, 5, 7, 9, 2], [4, 8, 18, 27]))
-
+"""""

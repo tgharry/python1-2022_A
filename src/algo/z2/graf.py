@@ -23,10 +23,19 @@ for item in dane:
 print(y)
 print(x)
 """""#
-x,y = dane[::2], dane[1::2]
+x, y = [1], [1]
 
-plt.plot(x,y)
-plt.xlabel("X")
-plt.ylabel("Y")
+for item in dane:
+    if item %2 ==0:
+        x.append(item)
+    else:
+        y.append(item)
+
+print(f'{x} \n{y}')
+
+x, y = dane[::2], dane[1::2]
+plt.plot(x, y)
+plt.xlabel("Size: ")
+plt.ylabel("Time: ")
 plt.show()
 #
