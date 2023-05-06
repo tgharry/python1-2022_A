@@ -5,10 +5,11 @@ System "pocigągów" ... de facto połączeń między miastami reprezentowanymi 
 
 
 """
+from collections import defaultdict
 from random import randint, seed
 
 N_CITIES = 20
-seed(10)
+seed(111)
 
 
 def generate_data(data_size):
@@ -18,9 +19,6 @@ def generate_data(data_size):
     return res
 
 
-
 if __name__ == '__main__':
-    rr = generate_data(10)
-    print(rr)
-
-
+    train_schedule = generate_data(10)
+    print(train_schedule)
