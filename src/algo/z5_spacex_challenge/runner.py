@@ -14,7 +14,7 @@ def run(n=50, wind_avg=0, wind_std=0.1, text='RUN', debug=False):
     total_ok = 0
     fuels = []
     for _ in range(n):
-        sim = Simulator(DumbShip())
+        sim = Simulator(VeloShip())
         result = sim.run_simulation(ShipState(height=10 + 2 * random(), speed=0, max_thrust=MAX_THRUST),
                                     wind=WindConditions(wind_avg, wind_std), debug=False)
         if debug:
