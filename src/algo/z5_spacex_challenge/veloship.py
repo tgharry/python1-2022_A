@@ -21,7 +21,7 @@ class VeloShip(Ship):
                 break
         else:
             goal = -0.1
-            reactiveness = 30
+            reactiveness = 34.9
         thr = get_velocity_stabilize_thrust(maxT, reactiveness, goal, v)
 
         if debug:

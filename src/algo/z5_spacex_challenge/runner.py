@@ -9,8 +9,10 @@ MAX_THRUST = 20
 
 seed(111)
 
+#wind average ? wind std
 
-def run(n=50, wind_avg=0, wind_std=0.1, text='RUN', debug=False):
+
+def run(n=100, wind_avg=5, wind_std=1, text='RUN', debug=False):
     total_ok = 0
     fuels = []
     for _ in range(n):
