@@ -20,4 +20,10 @@ Zadanie -- mamy dostępny zbiór sylab, oraz pewne słowo `word`; pytanie -- czy
 
 def construct_word(syllables: set[str], word: str) -> bool:
     #todo: your solution here
-    return True
+    #sylaby: A E I O U Y, wo/rd
+    for item in syllables:
+        if item in word:
+            return True
+        else:
+            return False
+
