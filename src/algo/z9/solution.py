@@ -31,6 +31,9 @@ def equalize_parity(a: list[int]) -> bool:
                 return False
         b = a
         c = (a[j] - a[0])
+    except:
+        return False
+    else:
         print(f'{c} || {b}')
         if (c > 0):
             b[-1] = c
@@ -41,9 +44,7 @@ def equalize_parity(a: list[int]) -> bool:
         print(f'|| {b_sum}')
         v = b_sum % 2
         print(v)
-        if (v == 0 or v == 1):
+        if (v == 0 or v == 1 or b[-1]%2==1):
             return True
         else:
             return False
-    except:
-        return False

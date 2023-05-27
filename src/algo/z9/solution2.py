@@ -17,7 +17,9 @@ def get_latest(versions: list[str]) -> str:
     :return: Latest semantic version from the given `versions`
     """
     # todo: your code
-    return '0.0.1'
+    a = sorted(versions)
+    print(a)
+    return a[-1]
 
 
 def next_version(version: str, level: int) -> str:
