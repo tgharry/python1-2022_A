@@ -17,11 +17,20 @@ def get_latest(versions: list[str]) -> str:
     :return: Latest semantic version from the given `versions`
     """
     # todo: your code
-    a = sorted(versions)
-    print(a)
-    return a[-1]
-
-
+    items = []
+    items_int = []
+    items_sorted = []
+    result = []
+    for item in versions:
+        items.append( item.split("." ))
+    for item1 in items :
+        item1 = list(map(int, item1 ) )
+        items_int.append(item1)
+    items_sorted = sorted(items_int)
+    for elem in items_sorted:
+        x = '.'.join(str(y) for y in elem )
+        result.append(x)
+    return result[-1]
 def next_version(version: str, level: int) -> str:
     """
     :param version: Current version
@@ -29,4 +38,17 @@ def next_version(version: str, level: int) -> str:
     :return: Properly incremented version
     """
     # todo: your code
-    return '0.0.1'
+    items = []
+    a = version.split(".")
+    b = ([int(x) for x in a])
+    if(level == 0):
+        b[0] = b[0] + 1
+        b[1] = 0
+        b[2] = 0
+    elif(level == 1):
+        b[1]=b[1] + 1
+        b[2]=0
+    elif (level == 2) :
+        b[2]=b[2] + 1
+    result = ('.'.join(str(x) for x in b))
+    return result

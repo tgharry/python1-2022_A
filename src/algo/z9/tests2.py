@@ -21,6 +21,6 @@ class SemVerTest(unittest.TestCase):
         self.assertEquals(next_version('2.21.2', 1), '2.22.0')
         self.assertEquals(next_version('2.21.2', 0), '3.0.0')
 
-
 if __name__ == '__main__':
     unittest.main()
+
