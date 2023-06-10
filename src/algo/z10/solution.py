@@ -47,6 +47,3 @@ def compatibility(string: str) -> list[int]:
 
 def randomized(min: int, max: int):
     return random.randint(min, max)
-
-
-print(compatibility('<>><<>'))
