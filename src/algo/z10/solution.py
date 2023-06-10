@@ -1,3 +1,4 @@
+import random
 """""
 Zadania na dziś (wieczorem.... /sad)
 Dany będzie napis składający się ze znaków < oraz >
@@ -34,14 +35,18 @@ def longest_combination(combination: str) -> int:
 
 def compatibility(string: str) -> list[int]:
     result = []
-    current_value = 0
+    starting_value = randomized(-10, 10)
+    result.append(starting_value)
     for symbol in string:
         if symbol == '<':
-            current_value -= 1
+            starting_value += randomized(1,10)
         elif symbol == '>':
-            current_value += 1
-        result.append(current_value)
+            starting_value -= randomized(1,10)
+        result.append(starting_value)
     return result
 
+def randomized(min: int, max: int):
+    return random.randint(min, max)
 
 
+print(compatibility('<>><<>'))
