@@ -11,16 +11,27 @@ k → kxak
 a → abba
 d → dfffrassd
 """""
-
-def encode(string: str) -> str:
-    global result
-    result = {}
-    coded = ''
-    for item in string:
-        case = {f'{item}' : f'{id_generator()}'}
-        result.update(case)
-        coded.join()
+dictionary = {}
+word = ""
 def id_generator(size=3, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
-
-print(encode('abc'))
+def encodering():
+    a = list(string.printable)
+    for _ in a:
+        dictionary[_] = id_generator()
+def encoder(s: str) -> str:
+    encodering()
+    word=""
+    for item in s:
+        word += dictionary[item]
+    print(word)
+    return word
+def decoder(s: str) -> str:
+    word = encoder(s)
+    dictionary_swap = {value: key for key, value in dictionary.items()}
+    result = ""
+    chunks=[word[i:i + 3] for i in range(0, len(word), 3)]
+    for item in chunks:
+        result+=dictionary_swap[item]
+    print(result)
+    return result
