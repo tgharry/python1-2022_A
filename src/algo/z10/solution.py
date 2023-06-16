@@ -16,6 +16,9 @@ możliwe rozwiązanie
 a=[2,10,5,8,3]
 ----
 rozwiązania plz na branchach wychodzących z
+
+
+
 """""
 
 def longest_combination(combination: str) -> int:
@@ -29,7 +32,6 @@ def longest_combination(combination: str) -> int:
             result = max(result,temp)
             temp = 1
 
-
     result = max(result, temp)
     return result
 
@@ -37,13 +39,19 @@ def compatibility(string: str) -> list[int]:
     result = []
     starting_value = randomized(-10, 10)
     result.append(starting_value)
-    for symbol in string:
-        if symbol == '<':
-            starting_value += randomized(1,10)
-        elif symbol == '>':
-            starting_value -= randomized(1,10)
-        result.append(starting_value)
-    return result
+    if(len(string) != 0):
+        for symbol in string:
+            if symbol == '<':
+                starting_value += randomized(1,10)
+            elif symbol == '>':
+                starting_value -= randomized(1,10)
+            result.append(starting_value)
+        return result
+    else:
+        result.append(-1)
+        return result
 
 def randomized(min: int, max: int):
     return random.randint(min, max)
+
+
