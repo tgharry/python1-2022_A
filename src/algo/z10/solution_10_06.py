@@ -13,7 +13,7 @@ d → dfffrassd
 """""
 dictionary = {}
 word = ""
-def id_generator(size=3, chars=string.ascii_uppercase + string.digits):
+def id_generator(size=3, chars = string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 def encodering():
     a = list(string.printable)
@@ -33,5 +33,6 @@ def decoder(s: str) -> str:
     chunks=[word[i:i + 3] for i in range(0, len(word), 3)]
     for item in chunks:
         result+=dictionary_swap[item]
-    print(result)
+    returner = f'{word} == {result}'
+    print(returner)
     return result
