@@ -12,16 +12,16 @@ a → abba
 d → dfffrassd
 """""
 dictionary = {}
-word = ""
-def id_generator(size=3, chars = string.ascii_uppercase + string.digits):
+
+def id_generator(size=3, chars = string.printable ):
     return ''.join(random.choice(chars) for _ in range(size))
 def encodering():
     a = list(string.printable)
     for _ in a:
-        dictionary[_] = id_generator()
+        dictionary[_] = _ + id_generator() + _
 def encoder(s: str) -> str:
     encodering()
-    word=""
+    word = ""
     for item in s:
         word += dictionary[item]
     print(word)
@@ -30,7 +30,7 @@ def decoder(s: str) -> str:
     word = encoder(s)
     dictionary_swap = {value: key for key, value in dictionary.items()}
     result = ""
-    chunks=[word[i:i + 3] for i in range(0, len(word), 3)]
+    chunks=[word[i:i + 5] for i in range(0, len(word), 5)]
     for item in chunks:
         result+=dictionary_swap[item]
     returner = f'{word} == {result}'
