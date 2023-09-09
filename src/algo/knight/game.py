@@ -4,12 +4,12 @@ def get_min_moves(target_x, target_y, start_x, start_y, chess_board_size):
         return -1
 
     """""
-    0 1   1 0
+    0 1   1 0 ' ' '
     1       1
         K
-  
     1       1 
     0 1   1 0
+    '
     """""
     knight_moves = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
     seen = set()
@@ -25,7 +25,6 @@ def get_min_moves(target_x, target_y, start_x, start_y, chess_board_size):
             if (next_x, next_y) not in seen:
                 game.append((next_x, next_y, steps + 1))
     return -1
-
 
 if get_min_moves == -1:
     print("Nie można wykonać tego ruchu")
