@@ -9,6 +9,3 @@ def is_on_board(position: tuple[int, int], max_dim: tuple[int, int] = (8, 8)):
             return False
     else:
         return False
-
-
-
