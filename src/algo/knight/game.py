@@ -2,15 +2,6 @@ def get_min_moves(target_x, target_y, start_x, start_y, chess_board_size):
     # Jeśl x,y poza, error
     if target_x < 0 or target_x >= chess_board_size or target_y < 0 or target_y >= chess_board_size:
         return -1
-
-    """""
-    0 1   1 0 ' ' '
-    1       1
-        K
-    1       1 
-    0 1   1 0
-    '
-    """""
     knight_moves = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
     seen = set()
     game = [(start_x, start_y, 0)]
